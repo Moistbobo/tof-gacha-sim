@@ -37,3 +37,7 @@ export const compositeBow = require('./images/Icon_Weapon_Composite_Bow.webp');
 export const weaponBatteryIII = require('./images/Icon_Item_Weapon_Battery_III.webp')
 
 export const gurenBlade = require('./images/Icon_Weapon_Guren_Blade.webp');
+
+export const redNucleus = require('./images/Icon_Currency_Red_Nucleus.webp');
+
+export const darkCrystal = require('./images/Icon_Currency_Dark_Crystal.webp');
