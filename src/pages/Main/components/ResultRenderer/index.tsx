@@ -17,22 +17,25 @@ const ResultRenderer = ({rolls}: Props) => {
     return rolls.map((x) => getItemData(x));
   }, [rolls]);
 
-  console.log(rollData);
   return (
     <Card
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        flex: 1,
         flexWrap: 'wrap',
         width: '60vw',
+        maxHeight: '75vh',
+        overflowY: 'scroll',
         alignItems: 'center',
+        marginY: 4,
         justifyContent: 'center',
       }}>
       {rollData.map((x) => (
         <img
           alt={x?.name}
           style={{
+            width: '3.5rem',
+            height: '3.5rem',
             borderRadius: 2,
             padding: 0.5,
             backgroundColor: colorMap[x.rarity],

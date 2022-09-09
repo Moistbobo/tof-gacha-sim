@@ -1,10 +1,13 @@
 import React from 'react';
-import {Box, Button, Card, Paper} from '@mui/material';
+import {Box, Button, Paper} from '@mui/material';
 import {Banner, BANNER_ENUM, Banners} from '../../assets/data/Banners';
 import {getGachaItemFromRoll, getRandomRange} from '../../lib/utils';
 import ResultRenderer from './components/ResultRenderer';
+import CurrencyUsedWindow from './components/CurrencyUsedWindow';
+import useStyles from './useStyles';
 
 const Main = () => {
+  const styles = useStyles();
   const [selectedBanner] = React.useState<BANNER_ENUM>(BANNER_ENUM.RED_LOTUS);
 
   const [totalRolls, setTotalRolls] = React.useState(0);
@@ -45,29 +48,21 @@ const Main = () => {
   );
 
   return (
-    <Paper
-      sx={{
-        display: 'flex',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'gray',
-        flexDirection: 'column',
-      }}>
+    <Paper sx={styles.container}>
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-        <Card
+        <Box
           sx={{
-            padding: 4,
-            alignSelf: 'center',
-            width: '60vw',
+            display: 'flex',
+            flexDirection: 'row',
           }}>
-          <Box>{`Num rolls: ${totalRolls}`}</Box>
-        </Card>
+          <CurrencyUsedWindow numRolls={totalRolls} />
+        </Box>
+
         <Box
           sx={{
             display: 'flex',
