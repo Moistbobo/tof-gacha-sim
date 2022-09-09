@@ -32,3 +32,4 @@ jobs:
           yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           CI: ""
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
