@@ -14,7 +14,7 @@ const Main = () => {
   const pityCounter = React.useRef(1);
 
   const activeBanner: Banner = React.useMemo(() => {
-    return Banners.find(x => x.id === selectedBanner) as Banner;
+    return Banners.find((x) => x.id === selectedBanner) as Banner;
   }, [selectedBanner]);
 
   const handleRollGacha = React.useCallback(
@@ -35,10 +35,10 @@ const Main = () => {
         return roll;
       });
 
-      setTotalRolls(prev => prev + numRolls);
+      setTotalRolls((prev) => prev + numRolls);
 
       setGachaResult(
-        rollResult.map(x => getGachaItemFromRoll(x, selectedBanner)),
+        rollResult.map((x) => getGachaItemFromRoll(x, selectedBanner)),
       );
     },
     [activeBanner, pityCounter],

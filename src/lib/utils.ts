@@ -11,7 +11,7 @@ export const getGachaItemFromRoll = (
   roll: number,
   bannerId: BANNER_ENUM,
 ): string => {
-  const activeBanner: Banner = Banners.find(x => x.id === bannerId) as Banner;
+  const activeBanner: Banner = Banners.find((x) => x.id === bannerId) as Banner;
 
   const {
     units: {SSR, SR, MISC, R},

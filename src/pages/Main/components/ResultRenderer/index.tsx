@@ -14,7 +14,7 @@ const colorMap: any = {
 
 const ResultRenderer = ({rolls}: Props) => {
   const rollData = React.useMemo(() => {
-    return rolls.map(x => getItemData(x));
+    return rolls.map((x) => getItemData(x));
   }, [rolls]);
 
   console.log(rollData);
@@ -29,7 +29,7 @@ const ResultRenderer = ({rolls}: Props) => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      {rollData.map(x => (
+      {rollData.map((x) => (
         <img
           alt={x?.name}
           style={{
