@@ -23,6 +23,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
+      - name: Install packages
+        run: |
+          yarn
       - name: Deploy with gh-pages
         run: |
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+          yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
