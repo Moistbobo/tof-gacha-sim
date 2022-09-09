@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tof-gacha-sim/static/css/main.e6c13ad2.css",
-    "main.js": "/tof-gacha-sim/static/js/main.c3a654d1.js",
+    "main.js": "/tof-gacha-sim/static/js/main.115d990c.js",
     "static/js/787.5578d1c1.chunk.js": "/tof-gacha-sim/static/js/787.5578d1c1.chunk.js",
     "static/media/Icon_Currency_Red_Nucleus.webp": "/tof-gacha-sim/static/media/Icon_Currency_Red_Nucleus.1f328274e86feae71fc3.webp",
     "static/media/Icon_Currency_Dark_Crystal.webp": "/tof-gacha-sim/static/media/Icon_Currency_Dark_Crystal.a5f238e1236dbc49b516.webp",
@@ -27,11 +27,11 @@
     "static/media/Icon_Weapon_Thunderous_Halberd.webp": "/tof-gacha-sim/static/media/Icon_Weapon_Thunderous_Halberd.a7fbb68eb2e953f4efa5.webp",
     "index.html": "/tof-gacha-sim/index.html",
     "main.e6c13ad2.css.map": "/tof-gacha-sim/static/css/main.e6c13ad2.css.map",
-    "main.c3a654d1.js.map": "/tof-gacha-sim/static/js/main.c3a654d1.js.map",
+    "main.115d990c.js.map": "/tof-gacha-sim/static/js/main.115d990c.js.map",
     "787.5578d1c1.chunk.js.map": "/tof-gacha-sim/static/js/787.5578d1c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c3a654d1.js"
+    "static/js/main.115d990c.js"
   ]
 }
