@@ -5,12 +5,15 @@ import {getGachaItemFromRoll, getRandomRange} from '../../lib/utils';
 import ResultRenderer from './components/ResultRenderer';
 import CurrencyUsedWindow from './components/CurrencyUsedWindow';
 import useStyles from './useStyles';
+import RollSummary from './components/RollSummary';
 
 const Main = () => {
   const styles = useStyles();
   const [selectedBanner] = React.useState<BANNER_ENUM>(BANNER_ENUM.RED_LOTUS);
 
-  const [totalRolls, setTotalRolls] = React.useState(0);
+  const [totalGachaRolls, setTotalGachaRolls] = React.useState<string[]>([]);
+
+  const totalRolls = totalGachaRolls.length;
 
   const [gachaResult, setGachaResult] = React.useState<string[]>([]);
 
@@ -38,11 +41,13 @@ const Main = () => {
         return roll;
       });
 
-      setTotalRolls((prev) => prev + numRolls);
-
-      setGachaResult(
-        rollResult.map((x) => getGachaItemFromRoll(x, selectedBanner)),
+      const _rolls = rollResult.map((x) =>
+        getGachaItemFromRoll(x, selectedBanner),
       );
+
+      setGachaResult(_rolls);
+
+      setTotalGachaRolls((prev) => [...prev, ..._rolls]);
     },
     [activeBanner, pityCounter],
   );
@@ -87,6 +92,8 @@ const Main = () => {
         </Box>
 
         <ResultRenderer rolls={gachaResult} />
+
+        <RollSummary allRolls={totalGachaRolls} />
       </Box>
     </Paper>
   );

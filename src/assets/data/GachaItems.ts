@@ -26,7 +26,7 @@ export enum RARITY_ENUM {
   SSR,
 }
 
-type GachaItem = {
+export type GachaItem = {
   name: string;
 
   weaponImage?: string;

@@ -1,21 +1,21 @@
 import React from 'react';
 import {Card} from '@mui/material';
-import {getItemData, RARITY_ENUM} from '../../../../assets/data/GachaItems';
+import {GachaItem, getItemData} from '../../../../assets/data/GachaItems';
+import GachaItemRenderer from '../GachaItemRenderer';
 
 type Props = {
   rolls: string[];
-};
-
-const colorMap: any = {
-  [RARITY_ENUM.R]: 'blue',
-  [RARITY_ENUM.SR]: 'purple',
-  [RARITY_ENUM.SSR]: 'gold',
 };
 
 const ResultRenderer = ({rolls}: Props) => {
   const rollData = React.useMemo(() => {
     return rolls.map((x) => getItemData(x));
   }, [rolls]);
+
+  const renderItem = React.useCallback(
+    (x: GachaItem) => <GachaItemRenderer item={x} />,
+    [],
+  );
 
   return (
     <Card
@@ -30,20 +30,7 @@ const ResultRenderer = ({rolls}: Props) => {
         marginY: 4,
         justifyContent: 'center',
       }}>
-      {rollData.map((x) => (
-        <img
-          alt={x?.name}
-          style={{
-            width: '3.5rem',
-            height: '3.5rem',
-            borderRadius: 2,
-            padding: 0.5,
-            backgroundColor: colorMap[x.rarity],
-            margin: 2,
-          }}
-          src={x?.weaponImage}
-        />
-      ))}
+      {rollData.map(renderItem)}
     </Card>
   );
 };
