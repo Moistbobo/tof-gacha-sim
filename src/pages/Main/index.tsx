@@ -74,9 +74,9 @@ const Main = () => {
             width: '100%',
             justifyContent: 'space-evenly',
           }}>
-          <Button variant="contained" onClick={() => handleRollGacha(1)}>
-            Roll 1
-          </Button>
+          {/* <Button variant="contained" onClick={() => handleRollGacha(1)}> */}
+          {/*  Roll 1 */}
+          {/* </Button> */}
 
           <Button variant="contained" onClick={() => handleRollGacha(10)}>
             Roll 10
