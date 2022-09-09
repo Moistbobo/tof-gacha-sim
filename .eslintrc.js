@@ -31,6 +31,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
     'react/function-component-definition': 0,
+    'no-underscore-dangle': 0,
   },
   settings: {
     'import/resolver': {
