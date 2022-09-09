@@ -22,7 +22,7 @@ const StandardBanner: Banner = {
   name: 'Standard Banner',
   id: BANNER_ENUM.STANDARD,
   units: {
-    MISC: ['Weapon battery III'],
+    MISC: ['Weapon Battery III'],
     R: [
       'Combat Blade',
       'Frosted Spear',

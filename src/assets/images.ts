@@ -22,7 +22,7 @@ export const terminator = require('./images/Icon_Weapon_The_Terminator.webp');
 
 export const pummeler = require('./images/Icon_Weapon_Pummeler.webp');
 
-export const nightingaleFeather = require('./images/Icon_Weapon_Nightingale%27s_Feather.webp');
+export const nightingaleFeather = require('./images/Icon_Weapon_Nightingale_Feather.webp');
 
 export const thunderousHalberd = require('./images/Icon_Weapon_Thunderous_Halberd.webp');
 
@@ -35,3 +35,5 @@ export const emBlade = require('./images/Icon_Weapon_EM_Blade.webp');
 export const compositeBow = require('./images/Icon_Weapon_Composite_Bow.webp');
 
 export const weaponBatteryIII = require('./images/Icon_Item_Weapon_Battery_III.webp')
+
+export const gurenBlade = require('./images/Icon_Weapon_Guren_Blade.webp');

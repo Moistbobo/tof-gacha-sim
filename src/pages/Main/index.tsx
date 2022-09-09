@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Button, Card, Paper} from '@mui/material';
 import {Banner, BANNER_ENUM, Banners} from '../../assets/data/Banners';
 import {getGachaItemFromRoll, getRandomRange} from '../../lib/utils';
+import ResultRenderer from './components/ResultRenderer';
 
 const Main = () => {
   const [selectedBanner] = React.useState<BANNER_ENUM>(BANNER_ENUM.RED_LOTUS);
@@ -21,16 +22,13 @@ const Main = () => {
       const rollResult = new Array(numRolls).fill(0).map(() => {
         const roll = getRandomRange(0, 10000);
         if (pityCounter.current === 80) {
-          console.log('SSR Pity');
           pityCounter.current = 1;
           return 74;
         }
         if (pityCounter.current > 0 && pityCounter.current % 10 === 0) {
-          console.log('SR Pity');
           pityCounter.current += 1;
           return Math.min(174, roll);
         }
-        console.log(pityCounter.current);
 
         pityCounter.current += 1;
 
@@ -39,7 +37,6 @@ const Main = () => {
 
       setTotalRolls(prev => prev + numRolls);
 
-      console.log(rollResult);
       setGachaResult(
         rollResult.map(x => getGachaItemFromRoll(x, selectedBanner)),
       );
@@ -70,7 +67,6 @@ const Main = () => {
             width: '60vw',
           }}>
           <Box>{`Num rolls: ${totalRolls}`}</Box>
-          <Box>{`Roll Result: ${gachaResult.join(', ')}`}</Box>
         </Card>
         <Box
           sx={{
@@ -85,7 +81,17 @@ const Main = () => {
           <Button variant="contained" onClick={() => handleRollGacha(10)}>
             Roll 10
           </Button>
+
+          <Button variant="contained" onClick={() => handleRollGacha(80)}>
+            Roll 80
+          </Button>
+
+          <Button variant="contained" onClick={() => handleRollGacha(120)}>
+            Roll 120
+          </Button>
         </Box>
+
+        <ResultRenderer rolls={gachaResult} />
       </Box>
     </Paper>
   );

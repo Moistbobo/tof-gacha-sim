@@ -21,7 +21,9 @@ export const getGachaItemFromRoll = (
   if (roll < 75) {
     // 50-50 for featured unit
     if (activeBanner.featuredUnits) {
-      if (getRandomRange(0, 1) === 0) {
+      const fifty = getRandomRange(0, 2);
+      console.log('f', fifty);
+      if (fifty === 0) {
         return activeBanner.featuredUnits.SSR[0];
       }
     }

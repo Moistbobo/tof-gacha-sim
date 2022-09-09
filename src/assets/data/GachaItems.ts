@@ -5,6 +5,7 @@ import {
   compositeBow,
   emBlade,
   frostedSpear,
+  gurenBlade,
   icewindArrow,
   moltenShieldV2,
   negatingCube,
@@ -39,7 +40,7 @@ const GachaItems: GachaItem[] = [
   {
     name: 'Guren Blade',
     simulacraName: 'Claudia',
-    weaponImage: '',
+    weaponImage: gurenBlade,
     rarity: 2,
   },
   {
