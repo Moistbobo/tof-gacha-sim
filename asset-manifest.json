@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/tof-gacha-sim/static/css/main.e6c13ad2.css",
-    "main.js": "/tof-gacha-sim/static/js/main.030f0ccd.js",
+    "main.js": "/tof-gacha-sim/static/js/main.c3a654d1.js",
     "static/js/787.5578d1c1.chunk.js": "/tof-gacha-sim/static/js/787.5578d1c1.chunk.js",
+    "static/media/Icon_Currency_Red_Nucleus.webp": "/tof-gacha-sim/static/media/Icon_Currency_Red_Nucleus.1f328274e86feae71fc3.webp",
+    "static/media/Icon_Currency_Dark_Crystal.webp": "/tof-gacha-sim/static/media/Icon_Currency_Dark_Crystal.a5f238e1236dbc49b516.webp",
     "static/media/Icon_Weapon_Chakram_of_the_Seas.webp": "/tof-gacha-sim/static/media/Icon_Weapon_Chakram_of_the_Seas.6b76cac649d77251ea54.webp",
     "static/media/Icon_Item_Weapon_Battery_III.webp": "/tof-gacha-sim/static/media/Icon_Item_Weapon_Battery_III.db98e264902f2d359a04.webp",
     "static/media/Icon_Weapon_Scythe_of_the_Crow.webp": "/tof-gacha-sim/static/media/Icon_Weapon_Scythe_of_the_Crow.03ba7e173e56e475b64e.webp",
@@ -25,11 +27,11 @@
     "static/media/Icon_Weapon_Thunderous_Halberd.webp": "/tof-gacha-sim/static/media/Icon_Weapon_Thunderous_Halberd.a7fbb68eb2e953f4efa5.webp",
     "index.html": "/tof-gacha-sim/index.html",
     "main.e6c13ad2.css.map": "/tof-gacha-sim/static/css/main.e6c13ad2.css.map",
-    "main.030f0ccd.js.map": "/tof-gacha-sim/static/js/main.030f0ccd.js.map",
+    "main.c3a654d1.js.map": "/tof-gacha-sim/static/js/main.c3a654d1.js.map",
     "787.5578d1c1.chunk.js.map": "/tof-gacha-sim/static/js/787.5578d1c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.030f0ccd.js"
+    "static/js/main.c3a654d1.js"
   ]
 }
