@@ -66,6 +66,7 @@ const Main = () => {
             flexDirection: 'row',
           }}>
           <CurrencyUsedWindow numRolls={totalRolls} />
+          <RollSummary allRolls={totalGachaRolls} />
         </Box>
 
         <Box
@@ -92,8 +93,6 @@ const Main = () => {
         </Box>
 
         <ResultRenderer rolls={gachaResult} />
-
-        <RollSummary allRolls={totalGachaRolls} />
       </Box>
     </Paper>
   );
