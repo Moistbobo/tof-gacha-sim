@@ -66,6 +66,7 @@ const Main = () => {
             flexDirection: 'row',
           }}>
           <CurrencyUsedWindow numRolls={totalRolls} />
+          <RollSummary allRolls={totalGachaRolls} />
         </Box>
 
         <Box
@@ -74,9 +75,9 @@ const Main = () => {
             width: '100%',
             justifyContent: 'space-evenly',
           }}>
-          {/* <Button variant="contained" onClick={() => handleRollGacha(1)}> */}
-          {/*  Roll 1 */}
-          {/* </Button> */}
+          <Button variant="contained" onClick={() => handleRollGacha(1)}>
+            Roll 1
+          </Button>
 
           <Button variant="contained" onClick={() => handleRollGacha(10)}>
             Roll 10
@@ -92,8 +93,6 @@ const Main = () => {
         </Box>
 
         <ResultRenderer rolls={gachaResult} />
-
-        <RollSummary allRolls={totalGachaRolls} />
       </Box>
     </Paper>
   );

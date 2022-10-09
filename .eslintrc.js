@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -32,6 +33,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
     'react/function-component-definition': 0,
     'no-underscore-dangle': 0,
+    'no-console': 0,
   },
   settings: {
     'import/resolver': {
